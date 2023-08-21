@@ -22,7 +22,7 @@ runs:
   steps:
     - name: "Install `paperpile-notion`"
       shell: "bash"
-      run: "npm install -g https://github.com/jordance71/paperpile-notion.git"
+      run: "npm install -g https://github.com/jordance71/paperpile-notion-workflow.git"
 
     - continue-on-error: true
       name: "Download `paperpile-notion` cache"
@@ -30,7 +30,7 @@ runs:
       with:
         workflow: "sync.yaml"
         name: "paperpile-notion-cache"
-        path: ".cache/paperpile-notion-sync/"
+        path: ".cache/paperpile-notion/"
         search_artifacts: true
         repo-token: ${{ secrets.GITHUB_TOKEN }}
 
