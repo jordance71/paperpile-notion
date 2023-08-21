@@ -32,6 +32,7 @@ runs:
         name: "paperpile-notion-cache"
         path: ".cache/paperpile-notion-sync/"
         search_artifacts: true
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: "Sync local `{.config,.cache}` with `~/{.config,.cache}`"
       shell: "bash"
