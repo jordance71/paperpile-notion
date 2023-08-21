@@ -31,6 +31,7 @@ runs:
         workflow: "sync.yaml"
         name: "paperpile-notion-cache"
         path: ".cache/paperpile-notion/"
+        run_id: ${{github.event.inputs.run_id}}
         search_artifacts: true
         
     - name: "Sync local `{.config,.cache}` with `~/{.config,.cache}`"
