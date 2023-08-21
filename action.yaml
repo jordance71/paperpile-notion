@@ -22,7 +22,7 @@ runs:
   steps:
     - name: "Install `paperpile-notion`"
       shell: "bash"
-      run: "npm install -g @jordance71/paperpile-notion"
+      run: "npm install -g https://github.com/jordance71/paperpile-notion.git"
 
     - continue-on-error: true
       name: "Download `paperpile-notion` cache"
