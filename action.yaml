@@ -24,9 +24,9 @@ runs:
       shell: "bash"
       run: "npm install -g https://github.com/jordance71/paperpile-notion-workflow.git"
 
-    - continue-on-error: true
-      name: "Download `paperpile-notion` cache"
+    - name: "Download `paperpile-notion` cache"
       uses: "dawidd6/action-download-artifact@v2"
+      continue-on-error: true
       with:
         workflow: "sync.yaml"
         name: "paperpile-notion-cache"
@@ -67,8 +67,7 @@ runs:
       run: |
         paperpile-notion articles:clean ${{ inputs.references }} -t ${{ inputs.token }}
 
-    - if: always()
-      name: "Upload `paperpile-notion` cache as Artifact"
+    - name: "Upload `paperpile-notion` cache as Artifact"
       uses: "actions/upload-artifact@v3"
       with:
         name: "paperpile-notion-cache"
