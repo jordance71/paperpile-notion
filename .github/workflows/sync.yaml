@@ -32,7 +32,7 @@ jobs:
           git checkout HEAD~1
 
       - name: "Run `paperpile-notion` sync"
-        uses: "jmuchovej/paperpile-notion@latest"
+        uses: "jordance71/paperpile-notion@latest"
         with:
           references: "references.bib"
           token: "${{ secrets.NOTION_INTEGRATION_TOKEN }}"
