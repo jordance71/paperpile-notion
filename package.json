@@ -1,6 +1,6 @@
 {
-  "name": "@jmuchovej/paperpile-notion",
-  "version": "1.3.0",
+  "name": "@jordance71/paperpile-notion",
+  "version": "1.3.3",
   "description": "CLI to sync your Paperpile with Notion",
   "author": "John Muchovej @jmuchovej",
   "bin": {
